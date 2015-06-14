@@ -1,0 +1,147 @@
+.new-merchandise {
+	h2 {
+		text-align: center;
+	}
+}
+
+.product-list {
+	margin: 0;
+	padding:0; 
+	text-align: center;
+	border-bottom: 1px solid @site-gray;
+
+	li {
+		list-style: none;
+		width: 100%;
+		float: left;
+		padding: 20px;
+		text-align: center;
+		cursor: pointer;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid @site-gray;
+		min-height: 465px;
+
+		&:first-child {
+			border-top-color: @site-gray;
+		}
+
+		&:hover {
+			border-color: @site-gray;
+		}
+
+		img {
+			max-width: 235px;
+			margin: 40px auto;
+			height: auto;
+			display: block;
+			clear: both;
+		}
+	}
+
+	.button {
+		display: inline-block;
+		margin: 40px 0;
+		padding: 8px 40px;
+	}
+}
+
+h4.product-category {
+	color: @site-dark-gray;
+	margin: 0;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+h3.product-title {
+	margin: 0 0 25px 0;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+span.product-price {
+	font-weight: 700;
+	color: #252525;
+	font-size: 25px;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) /* and (max-width: 979px) */ {
+	
+	.product-list {
+		border-bottom: 0;
+		
+		li {
+			width: 50%;
+
+			&:nth-child(odd) {
+				border-right: 1px solid @site-gray;
+			}
+
+			&:first-child,
+			&:nth-child(2) {
+				border-top-color: @site-gray;
+			} 			
+
+			&:hover {
+				border-top-color: @site-gray;	
+			}
+
+			img {
+				max-width: 220px;
+			}
+		}
+
+		span.product-price {
+			font-size: 16px;
+		}		
+	}
+}
+
+@media (min-width: 1024px) {
+	.product-list {
+		li {
+			&:nth-child(odd) {
+				border-color: transparent;
+			}
+			&:first-child,
+			&:nth-child(2) {
+				border-color: transparent;
+			}
+			&:hover {
+				border-color: @site-gray !important;
+			}
+		}
+	}
+}
+
+/* 
+	Products:
+		productid INT 11 a_i 
+*/
+
+.page-index {
+	.toggle-button {
+		position: relative;
+	}
+
+	.toggle {
+		display: none;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		line-height: 40px;
+
+		a {
+			color: #fff;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+		}
+	}
+}

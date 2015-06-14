@@ -1,0 +1,179 @@
+.newsletter {
+	text-align: center;
+
+	.icon {
+		padding: 20px;
+		border: 2px solid @site-dark-gray;
+		border-radius: 50%;
+		display: inline-block;
+		margin: 40px 10px 10px;
+
+		i {
+			font-size: 18px;
+		}
+	}
+
+	.newsletter-inner p {
+		font-size: 13px;
+	}	
+
+	h3 {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}	
+
+	input[type="text"] {
+		font-weight: 700;
+		color: #595F6E;
+	}	
+
+	input[type="submit"] {
+		margin: 15px 0 35px;
+	}
+
+	.input {
+		max-width: 350px;
+	}
+
+	.input-field {
+		color: #fff;
+		font-weight: 300;
+		padding: 0.85em 0.25em;
+	}
+
+	.input-label::after {
+		border-bottom-color: #fff;
+	}
+	.input-field:focus + .input-label .input-label-content,
+	.input--filled .input-label-content {
+		color: #fff;
+	}
+
+	.col-right {
+		form {
+			display:  none;
+		}
+	}	
+
+	.input-label::after {
+		border-bottom-color: @blue-button-border;
+	}	
+}
+
+.main-footer {
+	background: @footer-color;
+	padding: 40px 0;
+	text-align: center;
+
+	a, p {
+		color: @site-dark-gray;
+		font-size: 13px;
+		line-height: 16px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer-menu {
+		display: none;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) /* and (max-width: 979px) */ {
+	.newsletter {
+		.row-maxwidth {
+			max-width:  1100px;
+			margin: 0 auto;
+		}
+
+		.input-field {
+			max-width: 350px;
+		}
+
+		.col-right {
+			form {
+				text-align: right;
+				float: right;
+			}
+		}
+	}
+
+	.main-footer {
+		padding-bottom: 60px;
+
+		a, p {
+			line-height: 27px;
+		}
+
+		.copyrights br {
+			display: none;
+		}
+
+		.footer-menu {
+			display: block;
+
+			li {
+				display: inline-block;
+
+				a {.transition(@general-transition)}
+				a:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+			
+			.fa {
+				font-size: 20px;
+				margin-left: 50px;	
+				.transition(@general-transition);			
+
+				&:hover {
+					color: #3b5998;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 980px) {
+	.newsletter {
+		.col-left {
+			.clearfix();
+
+			.icon {
+				display: block;
+				width: 64px;
+				float: left;
+				margin: 40px 10px;
+			}
+
+			.text {
+				display: block;
+				float: left;
+				padding: 30px 0 0 30px;
+
+				h3, p {
+					text-align: left;
+				}
+
+				h3 {
+					margin-bottom: 4px;
+				}
+			}
+
+			form {
+				display: none;
+			}
+		}
+		.col-right {
+			form {
+				display: block;
+			}
+		}
+	}
+
+}

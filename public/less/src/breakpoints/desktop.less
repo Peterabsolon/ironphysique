@@ -1,0 +1,75 @@
+/* Desktop */
+@media (min-width: 980px) {
+
+	@import '../components/topstripe.less';
+
+	h2 {
+		margin: 50px 0 40px;
+	}
+
+	.row-maxwidth {
+		max-width: @page-width;
+		margin: 0 auto;
+	}
+
+	.topstripe {
+		margin: 0 -15px;
+		line-height: 50px;
+		height: 50px;
+		display: block;
+	}
+
+	.topstripe .cart {
+		text-align: right;
+	}
+
+	.main-header {
+		position: relative;
+		display: block;
+		margin: 0 auto;	
+		line-height: 100px;
+		z-index: @zindex-content;
+	}
+
+	.main-menu li {
+		line-height: 100px;
+
+		a {
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+
+	.hero {
+		h2 {
+			font-size: 48px;
+			padding-top: 230px;
+		}
+
+		.background {
+			height: 600px;
+			background-size: auto;
+		}
+	}
+
+	.product-list {
+		li {
+			width: 25%;
+			border: 1px solid transparent;
+		}
+	}
+}
+
+@media (min-width: 1024px) {	
+
+	.header-mobile {
+		display: none;
+	}
+
+	.main-header {
+		.clearfix();
+		display: block;
+		line-height: 100px;
+	}	
+}
+

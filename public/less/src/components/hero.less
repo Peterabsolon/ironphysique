@@ -1,0 +1,73 @@
+.hero {
+	text-align: center;
+	position: relative;
+	margin: 0 -15px;
+
+	.background {
+		background: url('@{site-url}images/homepage-hero.png');
+		background-size: 1400px auto;	
+		background-position: 59% 50%;
+		height: 480px;
+	}
+
+	h2 {
+		position: relative;
+		color: #fff;
+		font-weight: bold;
+		font-size: 30px; 
+		text-transform: uppercase;
+		padding: 280px 0 40px;
+		margin-top: 0;
+		text-shadow: 1px 1px 5px rgba(0,0,0,0.3);	
+		z-index: @zindex-content;
+		margin-bottom: 10px;
+	}
+}
+
+.page-default .hero .background {background: url('@{site-url}images/homepage-hero.png') 59% 50%;}
+.page-pani 		.hero .background {background: url('@{site-url}images/pani-hero.png') 24% 50%;}
+.page-damy 		.hero .background {background: url('@{site-url}images/damy-hero.png') 63% 50%;}
+.page-doplnky .hero .background {background: url('@{site-url}images/doplnky-hero.png') 59% 50%;}
+.page-login 	.hero .background {background: url('@{site-url}images/login-hero.png') 59% 50%;}
+
+.hero .button {
+	margin-bottom: 70px;
+	position: relative;
+	z-index: @zindex-buttons;
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: -webkit-linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+	background: -o-linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+	background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+	z-index: @zindex-graphics;
+}
+
+@media (min-width: 768px) {
+	.hero {
+		h2 {
+			font-size: 40px;
+			padding-top: 170px;
+		}
+
+		.background {
+			height: 350px;
+		}
+
+		.button {
+			margin-bottom: 20px;
+		}
+	}	
+}
+
+@media (min-width: 768px) {
+	.hero {
+		h2 {
+			
+		}
+	}
+}

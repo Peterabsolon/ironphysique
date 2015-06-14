@@ -1,0 +1,220 @@
+.topstripe {
+	background: @site-gray;
+	height: 35px;
+	line-height: 35px;
+	display: block;
+
+	.fa {
+		color: @site-medium-gray;
+		margin-right: 5px;
+		.transition(.2s all ease-in-out);
+		.transform(translateX(-2px));
+	}
+
+	.topstripe-right {
+		float: right;
+	}
+
+	.cart {
+		width: 40%;
+	}
+
+	.login {
+		padding-left: 0;
+		width: 60%;
+		text-align: right;	
+	}
+
+	span a {
+		color: @site-medium-gray;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		.transition(.2s all ease-in-out);
+		cursor: pointer;
+
+		&:hover {
+			.fa {
+				.transform(translateX(0px));			
+			}
+			color: @blue-button-bg;
+			text-decoration: none;
+		}
+	}
+
+	.modal {
+		padding-right: 0 !important;
+		text-align: center;
+	}
+}
+
+.login-modal,
+.login-page-modal,
+.settings-modal {
+	overflow-y: hidden;
+
+	.input {
+		max-width: 310px;
+		margin: 0 auto;
+	}
+
+	.button {
+		line-height: 10px;	
+		display: block;
+		margin: 20px auto;
+		font-size: 12px;
+	}
+
+	.close {
+	  position: absolute;
+	  top: 31px;
+	  right: 23px;
+	  outline: none;
+	}	
+
+	.modal-outer-header {
+		margin: 30px 0 20px;
+	}
+
+	.modal-content {
+		border-radius: 30px;
+	}
+
+	.modal-dialog {
+		width: 470px;
+	}
+
+	.modal-header {
+		position: relative;
+		padding: 0;
+	}
+
+	.register-submit-wrapper {
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	.modal-footer .button {
+		max-width: 240px;
+		margin: 0 auto;
+		text-align: center;
+
+		.fa {
+			color: #fff;
+		}
+	}
+
+	.modal-navigation {
+		.clearfix();
+
+		li:first-child {
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding: 13px 0 9px;
+			border-right: 1px solid #e5e5e5;
+  			a:hover {
+					color: @green-button-border;
+  			}
+
+  			&.active {
+					a {
+						color: @green-button-border;
+					}
+				}
+		}
+
+		li:nth-child(2) {
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding: 13px 0 9px;
+
+			a:hover {
+				color: @blue-button-border;
+			}
+
+			&.active {
+				a {
+					color: @blue-button-border;
+				}
+			}
+		}
+
+		a {
+			color: @site-dark-gray;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 700;
+			text-decoration: none;
+			letter-spacing: 0.5px;
+			.transition(0.2s all ease-in-out);
+		}
+	}
+
+	input[type="password"] {
+		letter-spacing: 4px;
+	}
+
+	.expand-title {
+		color: #959595;
+  		font-weight: 300;
+	}
+
+	.expand-trigger {
+		margin: 15px 0;
+	}
+
+	.expand-input {
+    	display:none;
+    	margin-right: 5px;
+	}
+
+	.expand-input + label span {
+	    display:inline-block;
+	    width:17px;
+	    height:19px;
+	    margin:-1px 8px 0 0;
+	    vertical-align:middle;
+	    background:url('../images/checkbox.png') 0px top no-repeat;
+	    cursor:pointer;
+	}
+	.expand-input:checked + label span {
+	    background:url('../images/checkbox.png') -17px top no-repeat;
+	}
+
+	#register {
+		.input-label::after {
+			border-bottom-color: @blue-button-border; 
+		}
+		
+		.input-field:focus + .input-label .input-label-content,
+		.input--filled .input-label-content {
+			color: @blue-button-border;
+		}
+	}
+}
+
+.settings-modal {
+	.close {top: 0px}
+
+	h3.username {
+		font-size: 15px;
+	  	font-weight: 300;
+	  	margin-bottom: 30px;
+	  	padding: 0 20px;
+	}
+
+	.modal-footer {
+		border: none;
+		padding: 25px 15px;
+	}
+}
+
+

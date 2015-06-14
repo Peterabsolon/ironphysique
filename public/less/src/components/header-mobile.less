@@ -1,0 +1,103 @@
+.main-header,
+.topstripe {
+  display: none;
+}
+.header-mobile {
+  .logo {
+  	background: url('@{site-url}images/site-logo@3x.png') no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+  	width: 40px;
+    height: 80px;
+    display: inline-block;
+    line-height: 80px;
+    position: absolute;
+    left: 15px;
+    text-indent: 99999px;
+    z-index: @zindex-buttons;
+  }
+  .logotype {
+    display: inline-block;
+    background: url('@{site-url}images/site-logotype@3x.png') no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+    width: 167px;
+    height: 80px;
+    position: absolute;
+    line-height: 80px;
+    left: 50%;
+    .transform(translateX(-50%));
+    z-index: 1;
+    text-indent: -9999px;
+    z-index: @zindex-buttons;
+  }
+}
+.hamburglar {
+  transform: scale(@mobile-button-scale);
+  margin: 0;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  display: block;
+  width: 68px;
+  height: 68px;
+  -webkit-touch-callout: none;
+  user-select: none;
+  z-index: @zindex-buttons;
+}
+
+#top, #bottom {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: @mobile-button-color;
+}
+
+#top {
+  top: 19px;
+  left: 14px;
+}
+
+#bottom {
+  top: 41px;
+  left: 14px;
+}
+
+path, line {
+  stroke: @mobile-button-color;
+  stroke-linecap: round;
+}
+
+#top, #bottom {
+  transform-origin: 34px 2px;
+  transform: rotate( 0deg ); 
+  transition: all @mobile-button-animation * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); 
+}
+
+#circle {
+  stroke-dasharray: 1 100 32 300; 
+  stroke-dashoffset: 101; 
+  transition: all @mobile-button-animation ease; 
+}
+
+.hamburglar.is-closed {
+  #circle {
+    stroke-dasharray: 1 100 190 300;
+    stroke-dashoffset: 1;
+  }
+  #top {
+    transform: translateX( -4.5px ) rotate( -45deg );
+  }
+  #bottom {
+    transform: translateX( -4.5px ) rotate( 45deg );
+  }
+}
+
+.page-nohero {
+  .header-mobile {
+    background-color: @footer-color;
+    height: 85px;    
+  }
+}

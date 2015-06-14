@@ -1,0 +1,60 @@
+
+// Mixins
+@import 'src/mixins.less';
+
+// Variables
+@import 'src/variables.less';
+
+// Partials
+@import 'src/partials/override.less';
+@import 'src/partials/buttons.less';
+@import 'src/partials/typography.less';
+@import 'src/partials/forms.less';
+@import 'src/partials/fonts.less';
+
+// Components
+@import 'src/components/header-mobile.less';
+@import 'src/components/hero.less';
+@import 'src/components/footer.less';
+@import 'src/components/sidebar.less';
+
+// Views
+@import 'src/pages/index.less';
+
+	// Pages
+	@import 'src/pages/katalog.less';
+	@import 'src/pages/kontakt.less';
+	@import 'src/pages/produkt.less';	
+
+	// Order
+	@import 'src/pages/kosik.less'; 
+	@import 'src/pages/checkout.less';
+	@import 'src/pages/thankyou.less';
+	
+	// Admin
+	@import 'src/pages/login.less';
+	@import 'src/pages/objednavky.less';
+	@import 'src/pages/dashboard.less';
+
+
+// Media queries
+@import 'src/breakpoints/tablet.less';
+@import 'src/breakpoints/desktop.less';
+
+
+// Queries 
+
+	// Landscape
+	@media (min-width: 480px) {
+		@import 'src/breakpoints/landscape.less';		
+	}
+
+	// Tablet
+	@media (min-width: 768px) {
+		@import 'src/breakpoints/tablet.less';
+	}
+
+	// Full width
+	@media (min-width: 980px) {
+		@import 'src/breakpoints/desktop.less';		
+	}

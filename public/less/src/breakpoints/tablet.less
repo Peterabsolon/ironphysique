@@ -1,0 +1,47 @@
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) /* and (max-width: 979px) */ {
+
+	.sidebar-overlay {
+		display: none;
+	}
+
+	.main-menu {
+		float: right;
+		padding: 0;
+		margin: 0 -15px 0 0;
+
+		li {
+			text-align: center;
+			float: left;																								
+			padding-left: 15px;		
+			line-height: 80px;
+
+			a {
+				line-height: 20px;
+				color: #000;
+				text-transform: uppercase;
+				font-weight: bold;			
+				border: 2px solid transparent;
+				padding: 5px 10px;
+				.box-sizing();
+				.transition(@general-transition);
+				border-radius: 45px;
+
+				&:hover {
+					.transform(translateY(-1px));
+					color: @blue-button-border;
+					text-decoration: none;
+				}	
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}			
+		}
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
